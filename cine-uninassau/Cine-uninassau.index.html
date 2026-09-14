@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine-uninassau | Venda de Ingressos</title>
+    <style>
+        /* Estilos gerais da página */
+        body {
+            background-color: #000000; /* Fundo preto */
+            color: #ffffff; /* Texto branco */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilo do Cabeçalho */
+        header {
+            background-color: #111111;
+            padding: 25px 20px;
+            text-align: center;
+            border-bottom: 3px solid #0056b3;
+            position: relative;
+        }
+
+        /* Logo no canto superior esquerdo */
+        .logo {
+            position: absolute;
+            top: 50%;
+            left: 30px;
+            transform: translateY(-50%);
+            max-height: 90px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            color: #FFD700; /* Amarelo forte */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        header p {
+            margin: 5px 0 0 0;
+            font-size: 1.1em;
+            color: #cccccc;
+        }
+
+        /* Responsividade para o cabeçalho em telas pequenas */
+        @media (max-width: 768px) {
+            header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .logo {
+                position: static;
+                transform: none;
+                margin-bottom: 15px;
+            }
+        }
+
+        /* Container principal dos filmes */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h2.section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+            color: #ffffff;
+        }
+
+        /* Grid de Filmes */
+        .movies-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        /* Cartão de cada filme */
+        .movie-card {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            width: 280px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+            border: 1px solid #333;
+            transition: transform 0.3s;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-5px);
+            border-color: #007bff;
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: 380px;
+            background-color: #333;
+            border-radius: 5px;
+            object-fit: cover;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        }
+
+        .movie-title {
+            font-size: 1.3em;
+            margin: 10px 0;
+            color: #ffffff;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .movie-info {
+            font-size: 0.9em;
+            color: #aaaaaa;
+            margin-bottom: 15px;
+        }
+
+        .sessions {
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+
+        .sessions span {
+            display: inline-block;
+            background-color: #2a2a2a;
+            padding: 5px 10px;
+            border-radius: 4px;
+            margin: 2px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .sessions span:hover {
+            background-color: #FFD700;
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* Botão de Compra Azul */
+        .btn-comprar {
+            background-color: #007bff; /* Azul */
+            color: #ffffff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-comprar:hover {
+            background-color: #0056b3; /* Azul mais escuro no hover */
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #111111;
+            margin-top: 50px;
+            border-top: 1px solid #333;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Imagem no canto superior esquerdo -->
+        <img src="obstinado.png" alt="Logo Uninassau" class="logo">
+        <div>
+            <h1>Cine-uninassau</h1>
+            <p>O seu cinema universitário. Compre seus ingressos online!</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Em Cartaz</h2>
+
+        <div class="movies-grid">
+            
+            <!-- Filme 1 -->
+            <div class="movie-card">
+                <img src="vampiro.jpg" alt="Pôster Spider-Man">
+                <h3 class="movie-title">Spider-Man: Homecoming (Versão BR)</h3>
+                <p class="movie-info">Ação / Comédia | 133 min | 12 anos</p>
+                <div class="sessions">
+                    <span>14:00</span>
+                    <span>17:30</span>
+                    <span>20:15</span>
+                </div>
+                <button class="btn-comprar" onclick="alert('Ingresso selecionado para Spider-Man!')">Comprar Ingresso</button>
+            </div>
+
+            <!-- Filme 2 -->
+            <div class="movie-card">
+                <img src="xd.jpg" alt="Pôster O Senhor dos Aluguéis">
+                <h3 class="movie-title">O Senhor dos Aluguéis: O Retorno do Gordo</h3>
+                <p class="movie-info">Aventura / Comédia | 120 min | Livre</p>
+                <div class="sessions">
+                    <span>15:00</span>
+                    <span>19:00</span>
+                    <span>21:30</span>
+                </div>
+                <button class="btn-comprar" onclick="alert('Ingresso selecionado para O Senhor dos Aluguéis!')">Comprar Ingresso</button>
+            </div>
+
+            <!-- Filme 3 -->
+            <div class="movie-card">
+                <img src="jack.jpg" alt="Pôster Harry Potter">
+                <h3 class="movie-title">Harry Potter e o Cálice Cálice Cálice</h3>
+                <p class="movie-info">Fantasia / Comédia | 145 min | 10 anos</p>
+                <div class="sessions">
+                    <span>13:30</span>
+                    <span>16:00</span>
+                    <span>18:45</span>
+                </div>
+                <button class="btn-comprar" onclick="alert('Ingresso selecionado para Harry Potter e o Cálice Cálice Cálice!')">Comprar Ingresso</button>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Cine-uninassau. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
